@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjaykumar P - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    :root {
+      --primary: #2ecc71;
+      --dark: #2c3e50;
+      --light: #ecf0f1;
+    }
+
+    body {
+      line-height: 1.6;
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 1rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, var(--light), #fff);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin-top: 1rem;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 2rem;
+      line-height: 1.8;
+    }
+
+    .projects-grid, .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-grid div {
+      background: var(--light);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .contact-links {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-links a {
+      margin: 0 1rem;
+      color: var(--dark);
+    }
+
+    .contact-links a:hover {
+      color: var(--primary);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#volunteer">Volunteer</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Sanjaykumar P</h1>
+    <p>B.Sc Computer Science | Entry-level Cloud Enthusiast | Web Developer</p>
+  </section>
+
+  <section id="profile">
+    <h2 class="section-title">Profile Summary</h2>
+    <p style="max-width: 800px; margin: auto; font-size: 1.2rem;">
+      I’m a B.Sc. Computer Science graduate with basic knowledge in web development, SQL, and backend concepts.
+      I’ve independently created simple projects like a portfolio website and an employee management system to strengthen my skills.
+      I’m eager to learn, grow, and contribute as a Cloud Engineer or Junior Software Developer in a dynamic work environment.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <ul style="max-width: 800px; margin: auto;">
+      <li><strong>Kongu Arts And Science College - Erode</strong><br/>BSc in Computer Science | GPA: 8.1/10.0<br/>Coursework: Computer Architecture, Software Engineering, Operating System</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Footstep Power Generation System - IoT</h3>
+        <p>Developed an IoT-based system that converts kinetic energy from footsteps into electrical energy. Integrated real-time data collection to optimize power generation and improve energy efficiency.</p>
+        <p><strong>Key Skills:</strong> IoT, Sensor Integration, Data Analysis</p>
+        <p><a href="https://github.com/Sanjaykumar-P" target="_blank">GitHub Link</a></p>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" title="Footstep Power Generation Video" allowfullscreen></iframe>
+      </div>
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Created a personal portfolio website to showcase skills, projects, and achievements. Focused on responsive design and user-friendly navigation.</p>
+        <p><strong>Key Skills:</strong> HTML, CSS, Web Design</p>
+        <p><a href="https://github.com/Sanjaykumar-P" target="_blank">GitHub Link</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <ul style="max-width: 800px; margin: auto;">
+      <li>Android App Development (Eclipse)</li>
+      <li>Excel for Intermediate Level (Great Learning)</li>
+      <li>Face Detection with OpenCV (Great Learning)</li>
+      <li>Artificial Intelligence with Python (Great Learning)</li>
+      <li>Cloud Foundations Using AWS (Great Learning)</li>
+    </ul>
+  </section>
+
+  <section id="workshops">
+    <h2 class="section-title">Workshops Attended</h2>
+    <ul style="max-width: 800px; margin: auto;">
+      <li>Computer Hardware</li>
+      <li>Cloud Computing Using AWS</li>
+    </ul>
+  </section>
+
+  <section id="volunteer">
+    <h2 class="section-title">Volunteer Experience</h2>
+    <ul style="max-width: 800px; margin: auto;">
+      <li>Volunteered for NSS (National Service Scheme)</li>
+      <li>Social and event management during college functions</li>
+      <li>Participated in NSS camps</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div>HTML/CSS</div>
+      <div>JavaScript</div>
+      <div>SQL</div>
+      <div>IoT Basics</div>
+      <div>Cloud Fundamentals (AWS)</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-links">
+      <a href="mailto:sanjaykumar80724@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/sanjaykumar77/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Sanjaykumar-P" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+</body>
+</html>
