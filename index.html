@@ -1,259 +1,1140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanjaykumar P - Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #059669;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --text: #334155;
+      --border: #e2e8f0;
+      --black: #000000;
+      --success: #16a34a;
+      --error: #dc2626;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    :root {
-      --primary: #2ecc71;
-      --dark: #2c3e50;
-      --light: #ecf0f1;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     }
 
     body {
       line-height: 1.6;
-      color: var(--dark);
+      color: var(--text);
+      background-color: white;
       scroll-behavior: smooth;
     }
 
+    /* Login Page */
+    #loginPage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      transition: opacity 0.5s ease;
+    }
+
+    .login-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .login-logo {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .logo-circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo-circle i {
+      color: white;
+      font-size: 2rem;
+    }
+
+    .tech-logos {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .tech-logo {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .tech-logo:hover {
+      transform: translateY(-3px);
+    }
+
+    .login-form {
+      margin-top: 1.5rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .login-btn:hover {
+      background: #1d4ed8;
+    }
+
+    /* Welcome Notification */
+    .welcome-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      z-index: 1001;
+      transform: translateX(120%);
+      transition: transform 0.3s ease;
+    }
+
+    .welcome-notification.show {
+      transform: translateX(0);
+    }
+
+    .welcome-notification i {
+      color: var(--primary);
+      margin-right: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    /* Visitor Count */
+    .visitor-count {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: var(--dark);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      z-index: 1001;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Floating Tech Icons */
+    .floating-icons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .floating-icon {
+      position: absolute;
+      opacity: 0.1;
+      animation: float 15s infinite linear;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Navigation */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
       background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--dark);
+      text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      justify-content: center;
-      padding: 1rem 0;
       list-style: none;
     }
 
     .nav-links li {
-      margin: 0 1rem;
+      margin-left: 1.5rem;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: var(--dark);
-      font-weight: bold;
+      color: var(--text);
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
       color: var(--primary);
     }
 
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    /* Sections */
     section {
-      padding: 5rem 2rem;
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .section-title {
       text-align: center;
       font-size: 2.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      color: var(--dark);
+      position: relative;
     }
 
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 0.8rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* Hero Section */
     .hero {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       text-align: center;
-      background: linear-gradient(135deg, var(--light), #fff);
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+      line-height: 1.2;
     }
 
     .hero p {
-      font-size: 1.3rem;
-      max-width: 600px;
-      margin-top: 1rem;
-      color: #555;
+      font-size: 1.25rem;
+      color: var(--text);
+      opacity: 0.9;
+      margin-bottom: 2rem;
     }
 
-    ul {
-      padding-left: 2rem;
-      line-height: 1.8;
-    }
-
-    .projects-grid, .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Tech Showcase in Hero */
+    .tech-showcase {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 1.5rem;
-      max-width: 1000px;
-      margin: auto;
+      margin-top: 3rem;
     }
 
-    .project-card {
-      background: #f9f9f9;
-      padding: 1.2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s;
     }
 
-    .project-card h3 {
+    .tech-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .tech-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
       margin-bottom: 0.5rem;
     }
 
-    .skills-grid div {
-      background: var(--light);
-      padding: 1rem;
-      text-align: center;
-      border-radius: 8px;
+    .tech-item span {
+      font-size: 0.9rem;
+      color: var(--text);
     }
 
-    .contact-links {
+    /* Profile Summary */
+    .profile-summary {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      font-size: 1.5rem;
+      padding: 2rem;
+      background: var(--light);
+      border-radius: 10px;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .service-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+
+    .service-tool {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light);
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .service-tool:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .service-tool img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .service-contact {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--light);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.5rem 0;
+      color: var(--text);
+    }
+
+    .contact-info-item i {
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Grid Layouts */
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Skills */
+    .skill-item {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .skill-item:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Projects */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      margin: 2rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .submit-btn:hover {
+      background: #1d4ed8;
+    }
+
+    /* Success Message */
+    .success-message {
+      display: none;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      padding: 1rem;
+      border-radius: 8px;
       margin-top: 1rem;
+      text-align: center;
+    }
+
+    .success-message i {
+      margin-right: 0.5rem;
+      color: var(--success);
+    }
+
+    /* Error Message */
+    .error-message {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: var(--error);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .error-message i {
+      margin-right: 0.5rem;
+    }
+
+    /* Contact Links */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
     .contact-links a {
-      margin: 0 1rem;
+      font-size: 1.5rem;
       color: var(--dark);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
     }
 
     .contact-links a:hover {
       color: var(--primary);
+      transform: scale(1.1);
     }
 
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      display: block;
-      margin: 1rem auto;
-      border-radius: 10px;
+    .contact-info {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
     }
 
+    /* Last Updated */
+    .last-updated {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text);
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      .nav-links {
+      .nav-container {
         flex-direction: column;
-        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        margin-top: 1rem;
+      }
+
+      .nav-links li {
+        margin-left: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 5rem 1.5rem;
+      }
+
+      .profile-summary {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 2rem 1.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links li {
+        margin: 0.5rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links a {
+        font-size: 1.3rem;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Floating Tech Icons -->
+  <div class="floating-icons" id="floatingIcons"></div>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#workshops">Workshops</a></li>
-      <li><a href="#volunteer">Volunteer</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="home" class="hero">
-    <h1>Sanjaykumar P</h1>
-    <p>B.Sc Computer Science | Entry-level Cloud Enthusiast | Web Developer</p>
-  </section>
-
-  <section id="profile">
-    <h2 class="section-title">Profile Summary</h2>
-    <p style="max-width: 800px; margin: auto; font-size: 1.2rem;">
-      I’m a B.Sc. Computer Science graduate with basic knowledge in web development, SQL, and backend concepts.
-      I’ve independently created simple projects like a portfolio website and an employee management system to strengthen my skills.
-      I’m eager to learn, grow, and contribute as a Cloud Engineer or Junior Software Developer in a dynamic work environment.
-    </p>
-  </section>
-
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-    <ul style="max-width: 800px; margin: auto;">
-      <li><strong>Kongu Arts And Science College - Erode</strong><br/>BSc in Computer Science | GPA: 8.1/10.0<br/>Coursework: Computer Architecture, Software Engineering, Operating System</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Footstep Power Generation System - IoT</h3>
-        <p>Developed an IoT-based system that converts kinetic energy from footsteps into electrical energy. Integrated real-time data collection to optimize power generation and improve energy efficiency.</p>
-        <p><strong>Key Skills:</strong> IoT, Sensor Integration, Data Analysis</p>
-        <p><a href="https://github.com/Sanjaykumar-P" target="_blank">GitHub Link</a></p>
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" title="Footstep Power Generation Video" allowfullscreen></iframe>
+  <!-- Login Page -->
+  <div id="loginPage">
+    <div class="login-container">
+      <div class="login-logo">
+        <div class="logo-circle">
+          <i class="fas fa-user"></i>
+        </div>
+        <h1>Sanjaykumar P</h1>
+        <p>Enter your credentials to view my portfolio</p>
+        <div class="tech-logos">
+          <div class="tech-logo" title="HTML5"><i class="fab fa-html5"></i></div>
+          <div class="tech-logo" title="CSS3"><i class="fab fa-css3-alt"></i></div>
+          <div class="tech-logo" title="JavaScript"><i class="fab fa-js"></i></div>
+          <div class="tech-logo" title="AWS"><i class="fab fa-aws"></i></div>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Personal Portfolio Website</h3>
-        <p>Created a personal portfolio website to showcase skills, projects, and achievements. Focused on responsive design and user-friendly navigation.</p>
-        <p><strong>Key Skills:</strong> HTML, CSS, Web Design</p>
-        <p><a href="https://github.com/Sanjaykumar-P" target="_blank">GitHub Link</a></p>
+      <form class="login-form" id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Welcome Notification -->
+  <div class="welcome-notification" id="welcomeNotification">
+    <i class="fas fa-check-circle"></i>
+    <div>
+      <strong>Welcome to my portfolio!</strong>
+      <p>Let's stay connected</p>
+    </div>
+  </div>
+
+  <!-- Visitor Count -->
+  <div class="visitor-count" id="visitorCount">
+    Visitors: <span id="count">0</span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <nav>
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">Sanjaykumar P</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hello, I'm Sanjaykumar P</h1>
+        <p>B.Sc Computer Science Graduate | Web Developer</p>
+        
+        <div class="profile-summary">
+          <p>I am a passionate web developer with a strong foundation in computer science. I specialize in creating responsive and user-friendly websites using modern technologies. My goal is to deliver high-quality web solutions that meet client requirements while maintaining clean code and best practices.</p>
+        </div>
+
+        <!-- Tech Showcase in Hero -->
+        <div class="tech-showcase">
+          <div class="tech-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="ChatGPT">
+            <span>ChatGPT</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://seeklogo.com/images/D/deepseek-logo-816C5B0B1D-seeklogo.com.png" alt="DeepSeek">
+            <span>DeepSeek</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="AI">
+            <span>AI Tools</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1792/1792671.png" alt="Laptop">
+            <span>Dev Tools</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="UI/UX">
+            <span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Professional website development services including responsive design, front-end development, and basic back-end integration.</p>
+          
+          <div class="service-tools">
+            <div class="service-tool">
+              <img src="https://cdn-icons-png.flaticon.com/512/226/226269.png" alt="HTML">
+            </div>
+            <div class="service-tool">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+            </div>
+            <div class="service-tool">
+              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+            </div>
+            <div class="service-tool">
+              <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="React">
+            </div>
+          </div>
+          
+          <div class="service-contact">
+            <h4>Contact for Services</h4>
+            <div class="contact-info-item">
+              <i class="fas fa-envelope"></i>
+              <span>sanjaykumar80724@gmail.com</span>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-phone"></i>
+              <span>8072414579</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="card">
+        <h3>Kongu Arts And Science College - Erode</h3>
+        <p><strong>Degree:</strong> BSc in Computer Science</p>
+        <p><strong>GPA:</strong> 8.1/10.0</p>
+        <p><strong>Coursework:</strong> Computer Architecture, Software Engineering, Operating Systems, Database Management</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="grid">
+        <div class="skill-item">HTML5 & CSS3</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">IoT Development</div>
+        <div class="skill-item">AWS Cloud</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Footstep Power Generation System - IoT</h3>
+          <p>An innovative IoT project that converts kinetic energy from human footsteps into usable electrical energy with real-time monitoring capabilities.</p>
+          <p><strong>Technologies Used:</strong> IoT sensors, Data analytics, Cloud integration</p>
+          
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/YOUR_IOT_PROJECT_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio website with visitor tracking and admin features.</p>
+          <p><strong>Technologies Used:</strong> HTML5, CSS3, JavaScript, LocalStorage API</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2 class="section-title">Certifications</hh2>
+      <div class="card">
+        <ul>
+          <li>Android App Development (Eclipse)</li>
+          <li>Excel Intermediate (Great Learning)</li>
+          <li>Face Detection with OpenCV (Great Learning)</li>
+          <li>Cloud Foundations Using AWS (Great Learning)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="workshops">
+      <h2 class="section-title">Workshops</h2>
+      <div class="card">
+        <ul>
+          <li>Computer Hardware Maintenance</li>
+          <li>Cloud Computing Using AWS</li>
+          <li>IoT Application Development</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="volunteer">
+      <h2 class="section-title">Volunteer Experience</h2>
+      <div class="card">
+        <ul>
+          <li><strong>NSS Volunteer</strong> - National Service Scheme (2 years)</li>
+          <li><strong>Event Coordinator</strong> - College Tech Fest</li>
+          <li><strong>Community Service</strong> - Village adoption program</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-section">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Your Email</label>
+            <input type="email" id="contactEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Your Message</label>
+            <textarea id="contactMessage" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span id="submitText">Send Message</span>
+          </button>
+          <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i>
+            <span>Thank you for contacting us! We will reach you out soon 😊</span>
+          </div>
+          <div class="error-message" id="errorMessage">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Oops! Something went wrong. Please try again later.</span>
+          </div>
+        </form>
+        
+        <div class="contact-links">
+          <a href="mailto:sanjaykumar80724@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/sanjaykumar77" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Sanjaykumar-P" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="last-updated">
+      Last Updated: <span id="lastUpdatedDate"></span>
     </div>
-  </section>
+  </div>
 
-  <section id="certifications">
-    <h2 class="section-title">Certifications</h2>
-    <ul style="max-width: 800px; margin: auto;">
-      <li>Android App Development (Eclipse)</li>
-      <li>Excel for Intermediate Level (Great Learning)</li>
-      <li>Face Detection with OpenCV (Great Learning)</li>
-      <li>Artificial Intelligence with Python (Great Learning)</li>
-      <li>Cloud Foundations Using AWS (Great Learning)</li>
-    </ul>
-  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Generate floating icons
+      const floatingIcons = document.getElementById('floatingIcons');
+      const techIcons = [
+        'fab fa-html5', 'fab fa-css3-alt', 'fab fa-js', 'fab fa-react',
+        'fab fa-node', 'fab fa-python', 'fab fa-aws', 'fas fa-laptop-code',
+        'fas fa-server', 'fas fa-database', 'fas fa-mobile-alt'
+      ];
+      
+      for (let i = 0; i < 20; i++) {
+        const icon = document.createElement('div');
+        icon.className = 'floating-icon';
+        icon.innerHTML = `<i class="${techIcons[Math.floor(Math.random() * techIcons.length)]}"></i>`;
+        icon.style.left = `${Math.random() * 100}%`;
+        icon.style.top = `${Math.random() * 100}%`;
+        icon.style.animationDuration = `${15 + Math.random() * 20}s`;
+        icon.style.animationDelay = `${Math.random() * 5}s`;
+        floatingIcons.appendChild(icon);
+      }
 
-  <section id="workshops">
-    <h2 class="section-title">Workshops Attended</h2>
-    <ul style="max-width: 800px; margin: auto;">
-      <li>Computer Hardware</li>
-      <li>Cloud Computing Using AWS</li>
-    </ul>
-  </section>
+      // Set last updated date
+      document.getElementById('lastUpdatedDate').textContent = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
 
-  <section id="volunteer">
-    <h2 class="section-title">Volunteer Experience</h2>
-    <ul style="max-width: 800px; margin: auto;">
-      <li>Volunteered for NSS (National Service Scheme)</li>
-      <li>Social and event management during college functions</li>
-      <li>Participated in NSS camps</li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-      <div>HTML/CSS</div>
-      <div>JavaScript</div>
-      <div>SQL</div>
-      <div>IoT Basics</div>
-      <div>Cloud Fundamentals (AWS)</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-links">
-      <a href="mailto:sanjaykumar80724@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/sanjaykumar77/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/Sanjaykumar-P" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
-
+      // DOM Elements
+      const loginPage = document.getElementById('loginPage');
+      const loginForm = document.getElementById('loginForm');
+      const welcomeNotification = document.getElementById('welcomeNotification');
+      const visitorCount = document.getElementById('visitorCount');
+      const countSpan = document.getElementById('count');
+      const mainContent = document.getElementById('mainContent');
+      const contactForm = document.getElementById('contactForm');
+      const successMessage = document.getElementById('successMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      const submitBtn = document.querySelector('.submit-btn');
+      const submitText = document.getElementById('submitText');
+      
+      // Visitor Tracking
+      let visitors = JSON.parse(localStorage.getItem('portfolioVisitors')) || {
+        count: 0,
+        lastVisit: null
+      };
+      
+      // Increment visitor count
+      visitors.count++;
+      visitors.lastVisit = new Date().toISOString();
+      localStorage.setItem('portfolioVisitors', JSON.stringify(visitors));
+      
+      // Update visitor count display
+      countSpan.textContent = visitors.count;
+      
+      // Login Functionality - Fixed
+      if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+          
+          // Simple validation (in real app, use proper authentication)
+          if (username.trim() !== '' && password.trim() !== '') {
+            // Hide login page
+            loginPage.style.opacity = '0';
+            
+            setTimeout(() => {
+              // Show welcome notification
+              welcomeNotification.classList.add('show');
+              
+              // Hide login page completely after transition
+              loginPage.style.display = 'none';
+              
+              // Show main content
+              mainContent.style.display = 'block';
+              setTimeout(() => {
+                mainContent.style.opacity = '1';
+              }, 50);
+              
+              // Hide welcome notification after 5 seconds
+              setTimeout(() => {
+                welcomeNotification.classList.remove('show');
+              }, 5000);
+            }, 500);
+          }
+        });
+      }
+      
+      // Contact Form Submission
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Hide any previous messages
+          successMessage.style.display = 'none';
+          errorMessage.style.display = 'none';
+          
+          // Show loading state
+          submitBtn.disabled = true;
+          submitText.textContent = 'Sending...';
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          
+          // Simulate form submission (replace with actual form submission)
+          setTimeout(() => {
+            // Show success message
+            successMessage.style.display = 'flex';
+            contactForm.reset();
+            
+            // Reset button state
+            submitBtn.disabled = false;
+            submitText.textContent = 'Send Message';
+            submitBtn.innerHTML = '<span id="submitText">Send Message</span>';
+          }, 1500);
+        });
+      }
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
