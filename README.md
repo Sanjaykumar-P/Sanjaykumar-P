@@ -1,8 +1,16 @@
 <!-- GitHub Profile README - Sanjaykumar-P -->
 
 <p align="center">
-  <!-- Animated Header GIF: replace URL with your custom GIF -->
-  <img src="https://yourdomain.com/your-header.gif" alt="Animated Header" width="800" />
+  <!-- Composite Skill Badge using Shields.io -->  
+  <img src="https://img.shields.io/badge/Profile_Views-1.2K-blue?style=for-the-badge&logo=github" alt="Profile Views" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Linux-Proficiency-85%25-success?style=for-the-badge&logo=linux" alt="Linux Proficiency" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/CCNA-In%20Progress-orange?style=for-the-badge&logo=cisco" alt="CCNA In Progress" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cloud-Enthusiast-00C8FF?style=for-the-badge&logo=amazon-aws" alt="Cloud Enthusiast" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/AI_Web_Developer-FE006F?style=for-the-badge&logo=artificial-intelligence" alt="AI Web Developer" />
 </p>
 
 <h1 align="center">👋 Hi, I'm Sanjaykumar P</h1>
@@ -10,22 +18,6 @@
 🎓 B.Sc. Computer Science | Aspiring AI Web Developer & Cloud DevOps Enthusiast  <br>
 💻 Passionate about Linux, Networking (CCNA in progress) & AI-driven Web Development  <br>
 🌐 Always coding, learning, and growing!
-</p>
-
----
-
-## 📊 Trophies & Stats
-
-<p align="center">
-  <!-- GitHub Profile Trophies -->  
-  <img src="https://github-profile-trophy.vercel.app/?username=Sanjaykumar-P&theme=discord&no-frame=true" alt="GitHub Trophies" width="600" />
-</p>
-
-<p align="center">
-  <!-- GitHub Stats Cards -->
-  <img src="https://github-readme-stats.vercel.app/api?username=Sanjaykumar-P&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" width="320" />
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sanjaykumar-P&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="260" />
 </p>
 
 ---
@@ -39,32 +31,7 @@
 
 ---
 
-## 😂 Fun Corner
 
-<p align="center">
-  <!-- Random Dev Joke Card -->  
-  <img src="https://readme-jokes.vercel.app/api" alt="Dev Joke" width="600" />
-</p>
-
----
-
-## 🎶 Now Playing
-
-<p align="center">
-  <!-- Spotify Now Playing Badge -->  
-  <img src="https://github-readme-music-stats.vercel.app/api/spotify?user=YOUR_SPOTIFY_USERNAME" alt="Now Playing on Spotify" width="600" />
-</p>
-
----
-
-## 🔨 Upcoming Projects (In Progress)
-
-- **Cloud CLI Utilities** — Handy scripts for AWS & Azure  
-- **Automated Backup Suite** — Scheduled backups & restores  
-- **CCNA Network Simulator** — Practice routing & switching labs  
-- **AI-Powered Portfolio Builder** — Lightweight web app using AI integrations
-
----
 
 ## 🤝 Let’s Connect
 
