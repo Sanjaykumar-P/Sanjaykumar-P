@@ -8,11 +8,11 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Sanjaykumar-P&label=Profile+Views&color=brightgreen&style=flat-square" alt="Profile Views" /><br><br>
-  <!-- Tech badges -->
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/CCNA-In%20Progress-007ACC?style=for-the-badge" alt="CCNA In Progress" />&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Cloud-Enthusiast-00C8FF?style=for-the-badge" alt="Cloud Enthusiast" />&nbsp;&nbsp;
+  <p align="center">
+  <!-- Tech Badges -->
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />&nbsp;
+  <img src="https://img.shields.io/badge/CCNA-In%20Progress-007ACC?style=for-the-badge" alt="CCNA In Progress" />&nbsp;
+  <img src="https://img.shields.io/badge/Cloud-Enthusiast-00C8FF?style=for-the-badge" alt="Cloud Enthusiast" />&nbsp;
   <img src="https://img.shields.io/badge/AI_Web_Dev-Lite%20Knowledge-FF69B4?style=for-the-badge&logo=tensorflow&logoColor=white" alt="AI Web Dev" />
 </p>
 
