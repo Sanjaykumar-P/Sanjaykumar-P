@@ -10,12 +10,18 @@
 <p align="center">
   <p align="center">
   <!-- Tech Badges -->
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />&nbsp;
-  <img src="https://img.shields.io/badge/CCNA-In%20Progress-007ACC?style=for-the-badge" alt="CCNA In Progress" />&nbsp;
-  <img src="https://img.shields.io/badge/Cloud-Enthusiast-00C8FF?style=for-the-badge" alt="Cloud Enthusiast" />&nbsp;
-  <img src="https://img.shields.io/badge/AI_Web_Dev-Lite%20Knowledge-FF69B4?style=for-the-badge&logo=tensorflow&logoColor=white" alt="AI Web Dev" />
-</p>
-
+ div style="background-color: black; color: white; padding: 40px; font-family: Arial; text-align: center;">
+  <h1 style="font-size: 48px; font-weight: bold;">DevOps Engineer</h1>
+  <div style="margin-top: 20px;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="40" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" height="40" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" height="40" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" height="40" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" height="40" />
+  </div>
+</div>
 ---
 
 ## 📈 GitHub Stats
