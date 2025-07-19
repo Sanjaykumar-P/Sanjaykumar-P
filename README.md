@@ -1,16 +1,43 @@
-## Hi there 👋
 
-<!--
-**Sanjaykumar-P/Sanjaykumar-P** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h1 align="center">Hi 👋, I'm Sanjaykumar P</h1>
+<h3 align="center">Aspiring Cloud Engineer | Linux Administrator</h3>
 
-Here are some ideas to get you started:
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=2000&pause=1000&color=00F700&center=true&vCenter=true&lines=Welcome+to+my+GitHub+Profile;Let's+build+something+amazing!" alt="Typing SVG" />
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+- 🌱 I’ve completed **Linux** and **CCNA**
+- 📘 I’m currently learning **AWS**, **Python**, and **DevOps**
+- 👯 I’m looking to collaborate on **Cloud & Automation projects**
+- 🤝 I’m open to contributing to **open source**
+- 💬 Ask me about **Linux commands, Networking, Cloud fundamentals**
+- 🔗 Portfolio: [Click to view my Portfolio](https://sanjaykumar-p.github.io/Portfolio/)
+- 📫 How to reach me: **sanjaykumar80724@gmail.com**
+- ⚡ Fun fact: I 💚 terminal over GUI!
+
+---
+
+### 📈 Contribution Timeline
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sanjaykumar-p&theme=radical&area=true&hide_border=true" alt="GitHub Activity Graph" />
+</p>
+
+---
+
+### 📫 Connect with Me
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/sanjaykumar77/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white">
+  </a>
+  <a href="mailto:sanjaykumar80724@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-red?style=flat-square&logo=gmail&logoColor=white">
+  </a>
+</p>
+
+<p align="center">
+  📬 <strong>Click my <a href="https://sanjaykumar-p.github.io/Portfolio/">Portfolio</a> and contact me for more collaborative work!</strong>
+</p>
