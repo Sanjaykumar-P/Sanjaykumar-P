@@ -12,7 +12,7 @@
 - 👯 I’m looking to collaborate on **Cloud & Automation projects**
 - 🤝 I’m open to contributing to **open source**
 - 💬 Ask me about **Linux commands, Networking, Cloud fundamentals**
-- 🔗 Profile: [Click to view my Profile](https://sanjaykumar-p.github.io/Portfolio/)
+- 🔗 Profile: [Click to view my Portfolio](https://sanjaykumar-p.github.io/Portfolio/)
 - 📫 How to reach me: **sanjaykumar80724@gmail.com**
 - ⚡ Fun fact: I 💚 terminal over GUI!
 
