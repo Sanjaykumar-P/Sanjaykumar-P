@@ -1,6 +1,6 @@
 <!-- 🖼️ Header Banner -->
 <p align="center">
-  <img src="https://github.com/Sanjaykumar-P/Sanjaykumar-P/blob/main/CL%20(5).png" alt="Sanjaykumar P Banner" />
+  <img src="" alt="Sanjaykumar P Banner" />
 </p>
 
 <!-- 👋 Intro and Title -->
