@@ -5,7 +5,7 @@
 
 <!-- 👋 Intro and Title -->
 <h1 align="center">Hi 👋, I'm Sanjaykumar P</h1>
-<h3 align="center">Aspiring Cloud Engineer | Linux Administrator</h3>
+<h3 align="center">Aspiring Devops Engineer</h3>
 
 <!-- ⌨️ Working Typing SVG -->
 <p align="center">
