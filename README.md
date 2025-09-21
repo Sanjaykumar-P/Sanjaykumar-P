@@ -1,6 +1,6 @@
 <!-- 🖼️ Header Banner -->
 <p align="center">
-  <img src="Untitled design.png" alt="Sanjaykumar P Banner" />
+  <img src="" alt="Sanjaykumar P Banner" />
 </p>
 
 <!-- 👋 Intro and Title -->
