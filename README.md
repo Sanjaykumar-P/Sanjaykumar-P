@@ -26,7 +26,7 @@
 
 ---
 
-### 🛠️ My Tech Stack
+### 🛠️ Tech & Tools
 
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
@@ -44,8 +44,6 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=sanjaykumar-p&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="Sanjaykumar P GitHub Stats" />
-  <br/>
-  <img src="https://github-profile-trophy.vercel.app/?username=sanjaykumar-p&theme=radical&row=1&column=6" alt="GitHub Trophies" />
 </p>
 
 ---
@@ -58,10 +56,18 @@
 
 ---
 
-### 💬 Languages & Skills
+### 💡 My Motto
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,linux,aws,docker,kubernetes,git,jenkins,terraform,ansible" />
+  <em>"Automate. Innovate. Elevate. 🚀"</em>
+</p>
+
+---
+
+### 👀 Visitors
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=sanjaykumar-p&color=00FF9C&style=flat-square" alt="Visitor Count" />
 </p>
 
 ---
@@ -74,9 +80,6 @@
   </a>
   <a href="mailto:sanjaykumarp8577@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-red?style=flat-square&logo=gmail&logoColor=white" alt="Gmail Badge" />
-  </a>
-  <a href="https://twitter.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white" alt="Twitter Badge" />
   </a>
 </p>
 
