@@ -1,13 +1,13 @@
 <!-- 🖼️ Header Banner -->
 <p align="center">
-  <img src="banner.png" alt="Sanjaykumar P Banner" />
+  <img src="banner.png" alt="Sanjaykumar P Banner" width="100%" />
 </p>
 
 <!-- 👋 Intro and Title -->
 <h1 align="center">Hi 👋, I'm Sanjaykumar P</h1>
-<h3 align="center">Aspiring Devops Engineer</h3>
+<h3 align="center">Aspiring DevOps Engineer | Cloud & Linux Enthusiast</h3>
 
-<!-- ⌨️ Working Typing SVG -->
+<!-- ⌨️ Animated Typing SVG -->
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=00FF9C&center=true&vCenter=true&width=700&lines=Welcome+to+my+GitHub+Profile;Linux+Administrator+%7C+Cloud+Engineer;Let's+automate+and+elevate+together!+🚀" alt="Typing SVG" />
 </p>
@@ -16,21 +16,36 @@
 
 ### 🚀 About Me
 
-- 🌱 I’ve completed **Linux** and **CCNA**  
-- 📘 I’m currently learning **AWS**, **Python**, and **DevOps**  
-- 👯 I’m looking to collaborate on **Cloud & Automation projects**  
-- 🤝 I’m open to contributing to **open source**  
-- 💬 Ask me about **Linux commands, Networking, Cloud fundamentals**  
-- 🔗 Profile: [Click to view my Profile](https://sanjaykumar-p.github.io/Portfolio/)  
-- 📫 How to reach me: **sanjaykumarp8577@gmail.com**  
+- 🌱 Completed **Linux**, **CCNA** & currently learning **AWS, Python, and DevOps**
+- 👯 Open to collaborating on **Cloud, Automation & Open Source projects**
+- 💬 Ask me about **Linux commands, Networking, Cloud fundamentals**
+- 💻 Tech Interests: **Containers | CI/CD | Monitoring | Cloud Automation**
+- 🔗 Portfolio: [View Profile](https://sanjaykumar-p.github.io/Portfolio/)
+- 📫 Email: **sanjaykumarp8577@gmail.com**
 - ⚡ Fun fact: I 💚 terminal over GUI!
+
+---
+
+### 🛠️ My Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+</p>
 
 ---
 
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sanjaykumar-p&show_icons=true&theme=radical" alt="Sanjaykumar P GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=sanjaykumar-p&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="Sanjaykumar P GitHub Stats" />
+  <br/>
+  <img src="https://github-profile-trophy.vercel.app/?username=sanjaykumar-p&theme=radical&row=1&column=6" alt="GitHub Trophies" />
 </p>
 
 ---
@@ -43,7 +58,15 @@
 
 ---
 
-### 💌 Connect with Me
+### 💬 Languages & Skills
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,linux,aws,docker,kubernetes,git,jenkins,terraform,ansible" />
+</p>
+
+---
+
+### 📫 Connect with Me
 
 <p align="center">
   <a href="https://www.linkedin.com/in/sanjaykumar77/" target="_blank">
@@ -52,8 +75,11 @@
   <a href="mailto:sanjaykumarp8577@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-red?style=flat-square&logo=gmail&logoColor=white" alt="Gmail Badge" />
   </a>
+  <a href="https://twitter.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white" alt="Twitter Badge" />
+  </a>
 </p>
 
 <p align="center">
-  📬 <strong>Click my <a href="https://sanjaykumar-p.github.io/Portfolio/">Profile</a> and contact me for more collaborative work!</strong>
+  📬 <strong>Check out my <a href="https://sanjaykumar-p.github.io/Portfolio/">Portfolio</a> & reach out for collaboration!</strong>
 </p>
