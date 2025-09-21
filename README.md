@@ -37,17 +37,7 @@
   <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
-
 ---
-
-### 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sanjaykumar-p&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="Sanjaykumar P GitHub Stats" />
-</p>
-
----
-
 ### 📈 Contribution Timeline
 
 <p align="center">
