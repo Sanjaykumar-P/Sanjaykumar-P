@@ -1,8 +1,4 @@
 <!-- 🖼️ Header Banner -->
-<p align="center">
-  <img src="banner.png" alt="Sanjaykumar P Banner" width="100%" />
-</p>
-
 <h1 align="center">Hi 👋, I'm Sanjaykumar P</h1>
 <h3 align="center">Networking & Wi-Fi Learner | CCNA Trained | Cybersecurity Explorer</h3>
 
