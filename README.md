@@ -1,6 +1,6 @@
 <!-- 🖼️ Header Banner -->
 <h1 align="center">Hi 👋, I'm Sanjaykumar P</h1>
-<h3 align="center">Networking & Wi-Fi Learner | CCNA Trained | Cybersecurity Explorer</h3>
+<h3 align="center">Networking | CCNA Trained | Cybersecurity Explorer</h3>
 
 <!-- Typing Animation -->
 <p align="center">
@@ -15,7 +15,7 @@
 - 📡 Passionate about **Networking, Wireless (Wi-Fi), Packet Flows, Protocol Analysis, and Network Security**  
 - 👯 Open to collaborating on **Networking Labs, Wi-Fi Experiments, Security Research, and Learning Projects**  
 - 💬 Ask me about **Linux, CCNA Basics, Wi-Fi Fundamentals, Network Troubleshooting & Security Concepts**  
-- 💻 Tech Interests: **Wi-Fi | CCNA | Cybersecurity | Linux | RF & Wireless Analysis | Secure Network Design**  
+- 💻 Tech Interests:  CCNA | Cybersecurity | Linux 
 - 🔗 Portfolio: [Click Here](https://sanjaykumar-p.github.io/Portfolio/)  
 - 📫 Email: **sanjaykumarp8577@gmail.com**  
 - ⚡ Fun fact: I love breaking networks just to figure out how to secure them 😄
