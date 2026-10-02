@@ -43,17 +43,6 @@ Single-file, offline-capable web app in vanilla HTML, CSS and JavaScript, built 
 | Services | DHCP, DHCP Relay, NTP, SNMP, Syslog |
 | Systems & Tools | Linux, Cisco IOS, Wireshark, EVE-NG |
 
-## Open Source
-
-Open-source contributor. I contribute to networking and security projects and share my lab work publicly.
-
-- [REPLACE: Project name](https://github.com/ORG/REPO) · short description of your contribution
-- [REPLACE: Project name](https://github.com/ORG/REPO) · short description of your contribution
-
-## Writing
-
-Cybersecurity and networking articles on [Medium](https://medium.com/@sanjaykumarp8577).
-
 ## Contact
 
 Open to Network Security Engineer roles.
